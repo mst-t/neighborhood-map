@@ -1,0 +1,74 @@
+* {
+    font-family: Geneva, Tahoma, Verdana, sans-serif;
+    color: #2F4F4F;
+}
+
+/* Header */
+header {
+    display: flex;
+    padding: 10px;
+    margin: 10px;
+    border-bottom: 1px solid #2F4F4F;
+}
+
+.button {
+    height: 30px;
+    width: 40px;
+    margin: 10px;
+    border-radius: 5px;
+}
+
+.main-title {
+    display: block;
+    margin: auto auto;
+}
+
+/* Menu */
+.menu {
+    flex: 1;
+    height: 75%;
+    padding: 10px;
+}
+
+.item {
+    cursor: pointer;
+    background-color: #F0E68C;
+    margin: 5px;
+}
+
+.item a {
+    color: inherit;
+}
+
+/* Map and main */
+main {
+    display: flex;
+}
+
+#map {
+    flex: 3;
+    width: 100%;
+    height: 600px;
+    max-height: 100%;
+    margin: 5px 0;
+}
+
+/* Media Query */
+@media screen and (max-width: 992px) {
+    main {
+        display: block;
+    }
+
+    .menu {
+        height: auto;
+    }
+
+    .items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .item {
+        font-size: 12px;
+    }
+}

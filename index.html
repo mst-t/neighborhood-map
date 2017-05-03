@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <title>Montreal Map</title>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <button class="button" data-bind="click: displayMenu">
+            <span class="glyphicon glyphicon-menu-hamburger"></span>
+        </button>
+        <h1 class="main-title">Montreal Island Map</h1>
+    </header>
+
+    <main>
+        <div class="menu" data-bind="visible: menuHidden">
+            <input type="text" class="form-control" placeholder="Find a location" data-bind="textInput: input">
+            <ul class="nav items">
+                <!-- ko foreach: filteredLocations -->
+                <li class="item">
+                    <a data-bind="text: title, click: selectItem(id)"></a>
+                </li>
+                <!-- /ko -->
+            </ul>
+        </div>
+
+        <div id="map"></div>
+    </main>
+
+    <script src="js/lib/jquery-3.2.0.min.js"></script>
+    <script src="js/lib/knockout-3.4.2.js"></script>
+    <script src="js/services/mapService.js"></script>
+    <script src="js/services/markerService.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/viewModel.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBv76HPhWqgzS8O4OpQv3BnXjyucJS8tWk&callback=initMap"
+    onerror="mapService.mapLoadError()"></script>
+</body>
+</html>
