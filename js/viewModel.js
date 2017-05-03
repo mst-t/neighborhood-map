@@ -23,7 +23,7 @@ var viewModel = function() {
      * selectItem
      * @description
      * Triggers the mouse click event when a list item is clicked.
-     * @params {number} id The id of a marker
+     * @param {number} id The id of a marker
      * @returns {function} Trigger event
      */
     self.selectItem = function(id) {

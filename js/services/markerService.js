@@ -9,7 +9,7 @@ var markerService = {
      * @description
      * Creates markers. The contents of the infoWindow are loaded asynchronously,
      * each time the marker is clicked.
-     * params {object} map Google map object
+     * @param {object} map Google map object
      * @returns {array} markers
      */
     createMarkers: function(map) {
@@ -117,8 +117,8 @@ var markerService = {
      * setAllMarkers
      * @description
      * Sets all markers on the google map.
-     * params {arrays} markerArray google map markers
-     * params {object} map Google map object
+     * @param {arrays} markerArray google map markers
+     * @param {object} map Google map object
      */
     setAllMarkers: function(markerArray, map) {
         markerArray.forEach(function(marker) {
